@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SWN Homes - For the best living</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* FOR LAPTOP */
+      @media (min-width: 992px) {
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        html {
+          font-family: "Montserrat", sans-serif;
+        }
+        /* Hero Section */
+        header {
+          max-width: 100%;
+          height: 100vh;
+          position: relative;
+          background-image: linear-gradient(
+              rgba(34, 34, 34, 0.8),
+              rgba(34, 34, 34, 0.5)
+            ),
+            url(astro-hero-01.jpeg);
+          background-size: cover;
+        }
+        .header-grid {
+          display: grid;
+          grid-template-columns: 11% auto;
+          grid-template-rows: 1fr 1fr;
+        }
+        #c-logo {
+          grid-column: 1 / span 1;
+          grid-row: 1 / span 2;
+          max-width: 140px;
+        }
+        #c-link {
+          grid-column: 2 / span 1;
+          grid-row: 1 / span 1;
+          /* position: absolute;
+          right: 15px; */
+          max-width: 100%;
+          color: white;
+          background-color: #212529;
+          background-size: auto;
+          padding-top: 15px;
+          font-family: montserrat;
+          display: flex;
+          justify-content: space-between;
+          padding-right: 25px;
+        }
+        /* #212529 
+        #989A9C
+        #E0E1E1*/
+        #c-link a:visited,
+        #c-link a:link {
+          color: white;
+          text-decoration: none;
+        }
+        #c-link a:nth-child(2):visited,
+        #c-link a:nth-child(2):link,
+        #c-link a:last-child:visited,
+        #c-link a:last-child:link {
+          color: #989a9c;
+        }
+
+        #c-link a:hover {
+          cursor: pointer;
+        }
+
+        #c-link a:nth-child(2):hover,
+        #c-link a:last-child:hover {
+          color: #e0e1e1;
+        }
+
+        #c-nav {
+          grid-column: 2 / span 1;
+          grid-row: 2 / span 1;
+          display: flex;
+          justify-content: space-between;
+          background-color: #212529;
+          padding-left: 65px;
+          padding-right: 65px;
+          font-family: montserrat;
+        }
+
+        #c-nav a:link,
+        #c-nav a:visited {
+          color: #989a9c;
+          text-decoration: none;
+        }
+        #c-nav a:hover {
+          color: #e0e1e1;
+        }
+        #c-nav a:nth-child(3):link,
+        #c-nav a:nth-child(3):visited,
+        #c-nav a:nth-child(4):link,
+        #c-nav a:nth-child(4):visited {
+          color: white;
+        }
+        .nav-link {
+          font-size: 20px;
+        }
+
+        #updating {
+          position: absolute;
+          color: #e0e1e1;
+          font-family: montserrat;
+          font-size: 50px;
+          top: 40%;
+          left: 10%;
+        }
+
+        /* RENTING & BUYING */
+
+        #flex-content-buying-renting {
+          display: none;
+          /* grid;
+          grid-template-columns: 1fr 1fr; */
+        }
+        #grid-buying {
+          display: none;
+          /* grid;
+          grid-template-columns: 45% 55%;
+          gap: -50px;
+          background-color: #202a44;
+          color: #e0e1e1;
+          padding: 35px 35px 30px 35px;
+          font-family: montserrat; */
+        }
+        #grid-renting {
+          display: none;
+          /* grid;
+          grid-template-columns: 45% 55%;
+          background-color: #36454f;
+          color: #e0e1e1;
+          padding: 35px 35px 30px 35px;
+          font-family: montserrat; */
+        }
+        #renting-buying-img {
+          border-radius: 8px;
+        }
+
+        /* FEEDBACK 
+      
+        check lai su tuong thich cua hinh anh voi cac kich thuoc web khac nhau
+        
+        #8091a8 */
+        #grid-feedback {
+          display: none;
+          /* grid;
+          grid-template-columns: 30% 70%;
+          font-family: montserrat;
+          background-color: #212529;
+          color: #e0e1e1;
+          position: relative;
+          padding-top: 60px;
+          padding-left: 100px;
+          padding-right: 100px;
+          padding-bottom: 60px; */
+        }
+        #bob-img {
+          border-radius: 8px;
+        }
+        .testimonial-text {
+          line-height: 1.5;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+        .btn-icon {
+          border: none;
+          height: 40px;
+          width: 40px;
+          position: absolute;
+        }
+        .icon--left {
+          left: 30px;
+          top: 50%;
+          transform: translate(0, -50%);
+          color: #989a9c;
+        }
+        .icon--right {
+          right: 30px;
+          top: 50%;
+          transform: translate(0, -50%);
+          color: #989a9c;
+        }
+
+        .icon--left:hover,
+        .icon--right:hover {
+          color: white;
+          cursor: pointer;
+          column-gap: 10px;
+        }
+        .dots {
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, 0);
+          bottom: 5%;
+        }
+        .dot {
+          height: 12px;
+          width: 12px;
+          border-radius: 50%;
+          border: none;
+          background-color: #989a9c;
+          cursor: pointer;
+        }
+        .active--dot {
+          background-color: white;
+        }
+        /* ABOUT US */
+        .about-us {
+          display: grid;
+          grid-template-columns: 70% 3%;
+          grid-template-rows: 1fr 1fr 1fr;
+          column-gap: 60px;
+          background-color: #202a44;
+          color: #e0e1e1;
+          font-family: montserrat;
+          padding: 40px 0px 20px 50px;
+        }
+
+        #kevin-img {
+          max-width: 200px;
+          grid-column: 2 / span 1;
+          grid-row: 1 / span 3;
+          border-radius: 50%;
+        }
+
+        #grid-footer-swn {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          background-color: #212529;
+          color: #e0e1e1;
+          font-family: montserrat;
+          margin-top: -20px;
+          padding: 30px 30px 20px 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-grid">
+        <img src="Untitled design.png" alt="Company logo" id="c-logo" />
+        <div id="c-link">
+          <!-- Link  -->
+          <a href="#" id="lang-link">&nbsp;</a>
+          <div>
+            <a href="#" target="_blank" id="lang-link"> 🇺🇸 EN</a> |
+            <a href="#" target="_blank" id="lang-link"> 🇻🇳 VI</a> |
+            <a href="#" target="_blank" id="lang-link"> 🇨🇳 中文</a>
+          </div>
+        </div>
+        <nav id="c-nav">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="index.html"
+            target="_blank"
+            >Home</a
+          >
+          <a class="nav-link" href="#">News</a>
+          <a class="nav-link" href="#grid-buying">Buying</a>
+          <a class="nav-link" href="#grid-renting">Renting</a>
+          <a class="nav-link" href="#grid-feedback">Feedback</a>
+          <a class="nav-link" href="#about-us">About Us</a>
+        </nav>
+        <h1 id="updating">Updating...</h1>
+      </div>
+    </header>
+    <div id="flex-content-buying-renting">
+      <section id="grid-buying">
+        <!-- buying -->
+        <img
+          src="buying.png"
+          alt="House Buying Image"
+          id="renting-buying-img"
+        />
+        <div>
+          <h4>Buying houses</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+            quibusdam ad deserunt natus officia sed.
+          </p>
+          <button
+            type="button"
+            class="btn btn-primary active"
+            data-bs-toggle="button"
+            autocomplete="off"
+            aria-pressed="true"
+          >
+            MORE INFO
+          </button>
+        </div>
+      </section>
+      <section id="grid-renting">
+        <!-- hiring -->
+        <img
+          src="renting.png"
+          alt="House Renting Image"
+          id="renting-buying-img"
+        />
+        <div>
+          <h4>Renting houses</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio
+            omnis deserunt, sapiente similique eaque autem odit.
+          </p>
+          <button
+            type="button"
+            class="btn btn-primary active"
+            data-bs-toggle="button"
+            autocomplete="off"
+            aria-pressed="true"
+          >
+            MORE INFO
+          </button>
+        </div>
+      </section>
+    </div>
+    <div>
+      <!-- testimonial -->
+      <div>
+        <div id="grid-feedback">
+          <img src="testi1.png" alt="Bob Handerson" id="bob-img" />
+          <div>
+            <h4>Feedback</h4>
+            <blockquote class="testimonial">
+              <p class="testimonial-text">
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+                quis omnis consequuntur, enim nostrum et aliquam eius iure
+                doloremque, architecto numquam fugiat, quia iste placeat ducimus
+                eaque natus voluptatibus hic."
+              </p>
+              <p class="testimonial-author">Bob Handerson</p>
+              <p class="testimonial-job">
+                Front-end and Back-end Developer at BK Software
+              </p>
+            </blockquote>
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="btn-icon icon--left"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 19.5L8.25 12l7.5-7.5"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="btn-icon icon--right"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
+          <div class="dots">
+            <button class="dot active--dot">&nbsp;</button>
+            <button class="dot">&nbsp;</button>
+            <button class="dot">&nbsp;</button>
+            <button class="dot">&nbsp;</button>
+            <button class="dot">&nbsp;</button>
+            <button class="dot">&nbsp;</button>
+            <button class="dot">&nbsp;</button>
+            <button class="dot">&nbsp;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <!-- about us -->
+      <div id="about-us">
+        <blockquote class="about-us">
+          <h4 class="about-us-head">About Us</h4>
+          <img src="about-us.jpg" alt="Kevin Nguyen" id="kevin-img" />
+          <p class="about-us-text">
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
+            fugiat. Doloremque, corporis impedit eos laborum neque sed,
+            recusandae quas culpa omnis in nulla suscipit animi atque laboriosam
+            fuga alias dolores temporibus."
+          </p>
+          <div>
+            <p class="about-us-author">Kevin Nguyen</p>
+            <p class="about-us-job">Chairman of SWN Homes</p>
+          </div>
+        </blockquote>
+      </div>
+    </div>
+    <footer id="grid-footer-swn">
+      <div>SWN HOMES JOINT STOCK COMPANY</div>
+      <div>
+        <p>DIRECTOR:</p>
+        <p>Mr. Kevin Nguyen</p>
+        <p>CONTACT:</p>
+        <p>Phone: 0903768809</p>
+        <p>Email: thuannt144@gmail.com</p>
+      </div>
+      <div>Address: Park 7 - Vinhomes Central Park</div>
+    </footer>
+  </body>
+</html>

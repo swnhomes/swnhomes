@@ -1,0 +1,222 @@
+/* FOR LAPTOP */
+@media (min-width: 992px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-family: "Montserrat", sans-serif;
+  }
+  /* Hero Section */
+  header {
+    max-width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: linear-gradient(
+        rgba(34, 34, 34, 0.8),
+        rgba(34, 34, 34, 0.5)
+      ),
+      url(astro-hero-01.jpeg);
+    background-size: cover;
+  }
+  .header-grid {
+    display: grid;
+    grid-template-columns: 11% auto;
+    grid-template-rows: 1fr 1fr;
+  }
+  #c-logo {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+    max-width: 140px;
+  }
+  #c-link {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    /* position: absolute;
+    right: 15px; */
+    max-width: 100%;
+    color: white;
+    background-color: #212529;
+    background-size: auto;
+    padding-top: 15px;
+    font-family: montserrat;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 25px;
+  }
+  /* #212529 
+  #989A9C
+  #E0E1E1*/
+  #c-link a:visited,
+  #c-link a:link {
+    color: white;
+    text-decoration: none;
+  }
+  #c-link a:nth-child(2):visited,
+  #c-link a:nth-child(2):link,
+  #c-link a:last-child:visited,
+  #c-link a:last-child:link {
+    color: #989a9c;
+  }
+
+  #c-link a:hover {
+    cursor: pointer;
+  }
+
+  #c-link a:nth-child(2):hover,
+  #c-link a:last-child:hover {
+    color: #e0e1e1;
+  }
+
+  #c-nav {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    display: flex;
+    justify-content: space-between;
+    background-color: #212529;
+    padding-left: 65px;
+    padding-right: 65px;
+    font-family: montserrat;
+  }
+
+  #c-nav a:link,
+  #c-nav a:visited {
+    color: #989a9c;
+    text-decoration: none;
+  }
+  #c-nav a:hover {
+    color: #e0e1e1;
+  }
+  #c-nav a:first-child:link,
+  #c-nav a:first-child:visited {
+    color: white;
+  }
+  .nav-link {
+    font-size: 20px;
+  }
+
+  /* RENTING & BUYING */
+
+  #flex-content-buying-renting {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #grid-buying {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    gap: -50px;
+    background-color: #202a44;
+    color: #e0e1e1;
+    padding: 35px 35px 30px 35px;
+    font-family: montserrat;
+  }
+  #grid-renting {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    background-color: #36454f;
+    color: #e0e1e1;
+    padding: 35px 35px 30px 35px;
+    font-family: montserrat;
+  }
+  #renting-buying-img {
+    border-radius: 8px;
+  }
+
+  /* FEEDBACK 
+
+  check lai su tuong thich cua hinh anh voi cac kich thuoc web khac nhau
+  
+  #8091a8 */
+  #grid-feedback {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    font-family: montserrat;
+    background-color: #212529;
+    color: #e0e1e1;
+    position: relative;
+    padding-top: 60px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 60px;
+  }
+  #bob-img {
+    border-radius: 50%;
+    height: 200px;
+  }
+  .testimonial-text {
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .btn-icon {
+    border: none;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+  }
+  .icon--left {
+    left: 30px;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: #989a9c;
+  }
+  .icon--right {
+    right: 30px;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: #989a9c;
+  }
+
+  .icon--left:hover,
+  .icon--right:hover {
+    color: white;
+    cursor: pointer;
+    column-gap: 10px;
+  }
+  .dots {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 5%;
+  }
+  .dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: none;
+    background-color: #989a9c;
+    cursor: pointer;
+  }
+  .active--dot {
+    background-color: white;
+  }
+  /* ABOUT US */
+  .about-us {
+    display: grid;
+    grid-template-columns: 70% 3%;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 60px;
+    background-color: #202a44;
+    color: #e0e1e1;
+    font-family: montserrat;
+    padding: 40px 0px 20px 50px;
+  }
+
+  #kevin-img {
+    max-width: 200px;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 3;
+    border-radius: 50%;
+  }
+
+  #grid-footer-swn {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #212529;
+    color: #e0e1e1;
+    font-family: montserrat;
+    margin-top: -20px;
+    padding: 30px 30px 20px 30px;
+  }
+}
